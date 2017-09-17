@@ -103,13 +103,34 @@
                 </dict>
                 <dict>
                     <key>CFBundleTypeName</key>
-                    <string>All Files</string>
+                    <string>Paprika Recipe File</string>
                     <key>LSHandlerRank</key>
-                    <string>Alternate</string>
+                    <string>Owner</string>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
                     <key>LSItemContentTypes</key>
                     <array>
-                        <string>public.data</string>
-                        <string>public.content</string>
+                        <string>public.paprikarecipe</string>
+                    </array>
+                    <key>CFBundleTypeExtensions</key>
+                    <array>
+                        <string>paprikarecipe</string>
+                    </array>
+                </dict>
+				<dict>
+                    <key>CFBundleTypeName</key>
+                    <string>HRecipe Recipe File</string>
+                    <key>LSHandlerRank</key>
+                    <string>Owner</string>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>LSItemContentTypes</key>
+                    <array>
+                        <string>public.hrecipe</string>
+                    </array>
+                    <key>CFBundleTypeExtensions</key>
+                    <array>
+                        <string>hrecipe</string>
                     </array>
                 </dict>
             </array>
