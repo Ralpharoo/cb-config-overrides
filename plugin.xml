@@ -82,6 +82,45 @@
 
             </array>
         </config-file>
+		<config-file target="*-Info.plist" parent="UTImportedTypeDeclarations">
+            <array>
+				<dict>
+					<key>UTTypeConformsTo</key>
+					<string>public.data</string>
+					<key>UTTypeIdentifier</key>
+					<string>public.paprikarecipe</string>
+					<key>UTTypeDescription</key>
+					<string>paprikarecipe</string>
+					<key>UTTypeTagSpecification</key>
+					<dict>
+						<key>public.filename-extension</key>
+						<array>
+							<string>paprikarecipe</string>
+						</array>
+					</dict>
+				</dict>
+            </array>
+			
+			<array>
+				<dict>
+					<key>UTTypeConformsTo</key>
+					<string>public.data</string>
+					<key>UTTypeIdentifier</key>
+					<string>public.hrecipe</string>
+					<key>UTTypeDescription</key>
+					<string>hrecipe</string>
+					<key>UTTypeTagSpecification</key>
+					<dict>
+						<key>public.filename-extension</key>
+						<array>
+							<string>hrecipe</string>
+						</array>
+					</dict>
+				</dict>
+            </array>
+        </config-file>
+				
+		
         <config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
             <array>
                 <dict>
@@ -105,7 +144,7 @@
                     <key>CFBundleTypeName</key>
                     <string>Paprika Recipe File</string>
                     <key>LSHandlerRank</key>
-                    <string>Owner</string>
+                    <string>Alternate</string>
                     <key>CFBundleTypeRole</key>
                     <string>Editor</string>
                     <key>LSItemContentTypes</key>
@@ -121,7 +160,7 @@
                     <key>CFBundleTypeName</key>
                     <string>HRecipe Recipe File</string>
                     <key>LSHandlerRank</key>
-                    <string>Owner</string>
+                    <string>Alternate</string>
                     <key>CFBundleTypeRole</key>
                     <string>Editor</string>
                     <key>LSItemContentTypes</key>
