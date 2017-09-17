@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="cordova-plugin-ipad-multitasking-support" version="0.1.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>CB: Config / Plist Overrides</name>
+    <author>Ralpharoo</author>
+    <description>CB Config / Plist Overrides</description>
+    <keywords></keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+	
+
+	<platform name="android">
+		<config-file parent="manifest/application/activity"  mode="add">
+			<intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+
+                <data android:pathPattern=".*/.cookbook" />
+                <data android:pathPattern=".*\\.cookbook" />
+                <data android:pathPattern=".*.\.cookbook" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:pathPattern=".*/.cookbook" />
+                <data android:pathPattern=".*\\.cookbook" />
+                <data android:pathPattern=".*.\.cookbook" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" android:pathPattern=".*/.cookbook" />
+                <data android:scheme="https" android:pathPattern=".*/.cookbook" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:mimeType="*/*" />
+                <data android:host="*" />
+                <data android:pathPattern=".*/.cookbook" />
+                <data android:pathPattern=".*/..*/.cookbook" />
+                <data android:pathPattern=".*/..*/..*/.cookbook" />
+                <data android:pathPattern=".*/..*/..*/..*/.cookbook" />
+                <data android:pathPattern=".*/.cookbook" />
+                <data android:pathPattern=".*/.*/.cookbook" />
+                <data android:pathPattern=".*/.*/.*/.cookbook" />
+                <data android:pathPattern=".*/.*/.*/.*/.cookbook" />
+                <data android:pathPattern=".*.\.cookbook" />
+                <data android:pathPattern=".*.\.*.\.cookbook" />
+                <data android:pathPattern=".*.\.*.\.*.\.cookbook" />
+                <data android:pathPattern=".*.\.*.\.*.\.*.\.cookbook" />
+            </intent-filter>
+
+        </config-file>
+	</platform>
+	
+	
+	<platform name="android">
+		<config-file target="*-Info.plist" parent="UTExportedTypeDeclarations">
+            <array>
+                <dict>
+                    <key>UTTypeConformsTo</key>
+                    <array>
+                        <string>public.data</string>
+                        <string>public.text</string>
+                    </array>
+                    <key>UTTypeDescription</key>
+                    <string>CookBook Recipe File</string>
+                    <key>UTTypeIdentifier</key>
+                    <string>com.cookbook.recipe</string>
+                    <key>UTTypeTagSpecification</key>
+                    <dict>
+                        <key>public.filename-extension</key>
+                        <string>cookbook</string>
+                    </dict>
+                </dict>
+
+            </array>
+        </config-file>
+        <config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
+            <array>
+                <dict>
+                    <key>CFBundleTypeName</key>
+                    <string>CookBook Recipe File</string>
+                    <key>LSHandlerRank</key>
+                    <string>Owner</string>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>LSItemContentTypes</key>
+                    <array>
+                        <string>public.cookbook</string>
+                        <string>com.cookbook.recipe</string>
+                    </array>
+                    <key>CFBundleTypeExtensions</key>
+                    <array>
+                        <string>cookbook</string>
+                    </array>
+                </dict>
+                <dict>
+                    <key>CFBundleTypeName</key>
+                    <string>All Files</string>
+                    <key>LSHandlerRank</key>
+                    <string>Alternate</string>
+                    <key>LSItemContentTypes</key>
+                    <array>
+                        <string>public.data</string>
+                        <string>public.content</string>
+                    </array>
+                </dict>
+            </array>
+
+        </config-file>
+	</platform>
+	
+</plugin>
+
