@@ -59,7 +59,8 @@
 	</platform>
 	
 	
-	<platform name="android">
+	<platform name="ios">
+
 		<config-file target="*-Info.plist" parent="UTExportedTypeDeclarations">
             <array>
                 <dict>
