@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cb-config-overrides" version="0.1.9" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cb-config-overrides" version="0.1.900" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>CB: Config / Plist Overrides</name>
     <author>Ralpharoo</author>
     <description>CB Config / Plist Overrides</description>
