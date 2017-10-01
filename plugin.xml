@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cb-config-overrides" version="0.1.965" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cb-config-overrides" version="0.1.970" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>CB: Config / Plist Overrides</name>
     <author>Ralpharoo</author>
     <description>CB Config / Plist Overrides</description>
@@ -16,7 +16,7 @@
 			<uses-permission android:name="android.permission.CAMERA" />
 			<uses-permission android:name="com.android.vending.BILLING"/>
 			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />	 <!-- This is not appearing? -->	
-			<uses-permission android:maxSdkVersion="100" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<!--<uses-permission android:maxSdkVersion="100" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
 			
 		</config-file>
 		
