@@ -244,7 +244,10 @@
             <array>
 				<dict>
 					<key>UTTypeConformsTo</key>
-					<string>public.data</string>
+					<array>
+						<string>public.data</string>
+						<string>public.text</string>
+					</array>
 					<key>UTTypeIdentifier</key>
 					<string>public.paprikarecipe</string>
 					<key>UTTypeDescription</key>
@@ -262,7 +265,10 @@
 			<array>
 				<dict>
 					<key>UTTypeConformsTo</key>
-					<string>public.data</string>
+					<array>
+						<string>public.data</string>
+						<string>public.text</string>
+					</array>
 					<key>UTTypeIdentifier</key>
 					<string>public.hrecipe</string>
 					<key>UTTypeDescription</key>
