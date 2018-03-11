@@ -219,18 +219,19 @@
 	
 	<platform name="ios">
 
-		<config-file target="*-Info.plist" parent="UTExportedTypeDeclarations">
+	<config-file target="*-Info.plist" parent="UTExportedTypeDeclarations">
             <array>
                 <dict>
                     <key>UTTypeConformsTo</key>
                     <array>
                         <string>public.plain-text</string>
                         <string>public.text</string>
+			<string>public.data</string>
                     </array>
                     <key>UTTypeDescription</key>
                     <string>CookBook Recipe File</string>
                     <key>UTTypeIdentifier</key>
-                    <string>com.cookbook.recipe</string>
+                    <string>com.app.cookbook.cookbook</string>
                     <key>UTTypeTagSpecification</key>
                     <dict>
                         <key>public.filename-extension</key>
@@ -296,8 +297,7 @@
                     <string>Editor</string>
                     <key>LSItemContentTypes</key>
                     <array>
-                        <string>public.cookbook</string>
-                        <string>com.cookbook.recipe</string>
+			<string>com.app.cookbook.cookbook</string>
                     </array>
                     <key>CFBundleTypeExtensions</key>
                     <array>
@@ -320,7 +320,7 @@
                         <string>paprikarecipe</string>
                     </array>
                 </dict>
-				<dict>
+		<dict>
                     <key>CFBundleTypeName</key>
                     <string>HRecipe Recipe File</string>
                     <key>LSHandlerRank</key>
