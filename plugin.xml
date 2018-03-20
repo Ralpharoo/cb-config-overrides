@@ -20,137 +20,137 @@
 		<!-- Old Intents -->
 		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity"  mode="add">
 		
-			<intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="content"/>
-                <data android:mimeType="application/octet-stream"/>
-                <data android:pathPattern=".*/.cookbook"/>
-                <data android:pathPattern=".*\\.cookbook"/>
-                <data android:pathPattern=".*.cookbook"/>
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="file"/>
-                <data android:pathPattern=".*/.cookbook"/>
-                <data android:pathPattern=".*\\.cookbook"/>
-                <data android:pathPattern=".*.cookbook"/>
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:pathPattern=".*/.cookbook" android:scheme="http"/>
-                <data android:pathPattern=".*/.cookbook" android:scheme="https"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="file"/>
-                <data android:mimeType="*/*"/>
-                <data android:host="*"/>
-                <data android:pathPattern=".*/.cookbook"/>
-                <data android:pathPattern=".*/..*/.cookbook"/>
-                <data android:pathPattern=".*/..*/..*/.cookbook"/>
-                <data android:pathPattern=".*/..*/..*/..*/.cookbook"/>
-                <data android:pathPattern=".*/.cookbook"/>
-                <data android:pathPattern=".*/.*/.cookbook"/>
-                <data android:pathPattern=".*/.*/.*/.cookbook"/>
-                <data android:pathPattern=".*/.*/.*/.*/.cookbook"/>
-                <data android:pathPattern=".*.cookbook"/>
-                <data android:pathPattern=".*.*.cookbook"/>
-                <data android:pathPattern=".*.*.*.cookbook"/>
-                <data android:pathPattern=".*.*.*.*.cookbook"/>
-            </intent-filter>
+			   <!--<intent-filter android:label="@string/app_name">
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:scheme="content"/>
+				<data android:mimeType="application/octet-stream"/>
+				<data android:pathPattern=".*/.cookbook"/>
+				<data android:pathPattern=".*\\.cookbook"/>
+				<data android:pathPattern=".*.cookbook"/>
+			    </intent-filter>-->
+			    <intent-filter android:label="@string/app_name">
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:scheme="file"/>
+				<data android:pathPattern=".*/.cookbook"/>
+				<data android:pathPattern=".*\\.cookbook"/>
+				<data android:pathPattern=".*.cookbook"/>
+			    </intent-filter>
+			    <!--<intent-filter android:label="@string/app_name">
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:pathPattern=".*/.cookbook" android:scheme="http"/>
+				<data android:pathPattern=".*/.cookbook" android:scheme="https"/>
+			    </intent-filter>-->
+			    <intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:scheme="file"/>
+				<data android:mimeType="*/*"/>
+				<data android:host="*"/>
+				<data android:pathPattern=".*/.cookbook"/>
+				<data android:pathPattern=".*/..*/.cookbook"/>
+				<data android:pathPattern=".*/..*/..*/.cookbook"/>
+				<data android:pathPattern=".*/..*/..*/..*/.cookbook"/>
+				<data android:pathPattern=".*/.cookbook"/>
+				<data android:pathPattern=".*/.*/.cookbook"/>
+				<data android:pathPattern=".*/.*/.*/.cookbook"/>
+				<data android:pathPattern=".*/.*/.*/.*/.cookbook"/>
+				<data android:pathPattern=".*.cookbook"/>
+				<data android:pathPattern=".*.*.cookbook"/>
+				<data android:pathPattern=".*.*.*.cookbook"/>
+				<data android:pathPattern=".*.*.*.*.cookbook"/>
+			    </intent-filter>
 			
 			
 			
-			<intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="content"/>
-                <data android:mimeType="application/octet-stream"/>
-                <data android:pathPattern=".*/.hrecipe"/>
-                <data android:pathPattern=".*\\.hrecipe"/>
-                <data android:pathPattern=".*.hrecipe"/>
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="file"/>
-                <data android:pathPattern=".*/.hrecipe"/>
-                <data android:pathPattern=".*\\.hrecipe"/>
-                <data android:pathPattern=".*.hrecipe"/>
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:pathPattern=".*/.hrecipe" android:scheme="http"/>
-                <data android:pathPattern=".*/.hrecipe" android:scheme="https"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="file"/>
-                <data android:mimeType="*/*"/>
-                <data android:host="*"/>
-                <data android:pathPattern=".*/.hrecipe"/>
-                <data android:pathPattern=".*/..*/.hrecipe"/>
-                <data android:pathPattern=".*/..*/..*/.hrecipe"/>
-                <data android:pathPattern=".*/..*/..*/..*/.hrecipe"/>
-                <data android:pathPattern=".*/.hrecipe"/>
-                <data android:pathPattern=".*/.*/.hrecipe"/>
-                <data android:pathPattern=".*/.*/.*/.hrecipe"/>
-                <data android:pathPattern=".*/.*/.*/.*/.hrecipe"/>
-                <data android:pathPattern=".*.hrecipe"/>
-                <data android:pathPattern=".*.*.hrecipe"/>
-                <data android:pathPattern=".*.*.*.hrecipe"/>
-                <data android:pathPattern=".*.*.*.*.hrecipe"/>
-            </intent-filter>
-			
-			
-			<intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="content"/>
-                <data android:mimeType="application/octet-stream"/>
-                <data android:pathPattern=".*/.paprikarecipe"/>
-                <data android:pathPattern=".*\\.paprikarecipe"/>
-                <data android:pathPattern=".*.paprikarecipe"/>
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="file"/>
-                <data android:pathPattern=".*/.paprikarecipe"/>
-                <data android:pathPattern=".*\\.paprikarecipe"/>
-                <data android:pathPattern=".*.paprikarecipe"/>
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:pathPattern=".*/.paprikarecipe" android:scheme="http"/>
-                <data android:pathPattern=".*/.paprikarecipe" android:scheme="https"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="file"/>
-                <data android:mimeType="*/*"/>
-                <data android:host="*"/>
-                <data android:pathPattern=".*/.paprikarecipe"/>
-                <data android:pathPattern=".*/..*/.paprikarecipe"/>
-                <data android:pathPattern=".*/..*/..*/.paprikarecipe"/>
-                <data android:pathPattern=".*/..*/..*/..*/.paprikarecipe"/>
-                <data android:pathPattern=".*/.paprikarecipe"/>
-                <data android:pathPattern=".*/.*/.paprikarecipe"/>
-                <data android:pathPattern=".*/.*/.*/.paprikarecipe"/>
-                <data android:pathPattern=".*/.*/.*/.*/.paprikarecipe"/>
-                <data android:pathPattern=".*.paprikarecipe"/>
-                <data android:pathPattern=".*.*.paprikarecipe"/>
-                <data android:pathPattern=".*.*.*.paprikarecipe"/>
-                <data android:pathPattern=".*.*.*.*.paprikarecipe"/>
-            </intent-filter>
+		  <!--<intent-filter android:label="@string/app_name">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:scheme="content"/>
+			<data android:mimeType="application/octet-stream"/>
+			<data android:pathPattern=".*/.hrecipe"/>
+			<data android:pathPattern=".*\\.hrecipe"/>
+			<data android:pathPattern=".*.hrecipe"/>
+		    </intent-filter>
+		    <intent-filter android:label="@string/app_name">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:scheme="file"/>
+			<data android:pathPattern=".*/.hrecipe"/>
+			<data android:pathPattern=".*\\.hrecipe"/>
+			<data android:pathPattern=".*.hrecipe"/>
+		    </intent-filter>
+		    <intent-filter android:label="@string/app_name">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:pathPattern=".*/.hrecipe" android:scheme="http"/>
+			<data android:pathPattern=".*/.hrecipe" android:scheme="https"/>
+		    </intent-filter>
+		    <intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:scheme="file"/>
+			<data android:mimeType="*/*"/>
+			<data android:host="*"/>
+			<data android:pathPattern=".*/.hrecipe"/>
+			<data android:pathPattern=".*/..*/.hrecipe"/>
+			<data android:pathPattern=".*/..*/..*/.hrecipe"/>
+			<data android:pathPattern=".*/..*/..*/..*/.hrecipe"/>
+			<data android:pathPattern=".*/.hrecipe"/>
+			<data android:pathPattern=".*/.*/.hrecipe"/>
+			<data android:pathPattern=".*/.*/.*/.hrecipe"/>
+			<data android:pathPattern=".*/.*/.*/.*/.hrecipe"/>
+			<data android:pathPattern=".*.hrecipe"/>
+			<data android:pathPattern=".*.*.hrecipe"/>
+			<data android:pathPattern=".*.*.*.hrecipe"/>
+			<data android:pathPattern=".*.*.*.*.hrecipe"/>
+		    </intent-filter>
+
+
+		<intent-filter android:label="@string/app_name">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:scheme="content"/>
+			<data android:mimeType="application/octet-stream"/>
+			<data android:pathPattern=".*/.paprikarecipe"/>
+			<data android:pathPattern=".*\\.paprikarecipe"/>
+			<data android:pathPattern=".*.paprikarecipe"/>
+		    </intent-filter>
+		    <intent-filter android:label="@string/app_name">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:scheme="file"/>
+			<data android:pathPattern=".*/.paprikarecipe"/>
+			<data android:pathPattern=".*\\.paprikarecipe"/>
+			<data android:pathPattern=".*.paprikarecipe"/>
+		    </intent-filter>
+		    <intent-filter android:label="@string/app_name">
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:pathPattern=".*/.paprikarecipe" android:scheme="http"/>
+			<data android:pathPattern=".*/.paprikarecipe" android:scheme="https"/>
+		    </intent-filter>
+		    <intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:scheme="file"/>
+			<data android:mimeType="*/*"/>
+			<data android:host="*"/>
+			<data android:pathPattern=".*/.paprikarecipe"/>
+			<data android:pathPattern=".*/..*/.paprikarecipe"/>
+			<data android:pathPattern=".*/..*/..*/.paprikarecipe"/>
+			<data android:pathPattern=".*/..*/..*/..*/.paprikarecipe"/>
+			<data android:pathPattern=".*/.paprikarecipe"/>
+			<data android:pathPattern=".*/.*/.paprikarecipe"/>
+			<data android:pathPattern=".*/.*/.*/.paprikarecipe"/>
+			<data android:pathPattern=".*/.*/.*/.*/.paprikarecipe"/>
+			<data android:pathPattern=".*.paprikarecipe"/>
+			<data android:pathPattern=".*.*.paprikarecipe"/>
+			<data android:pathPattern=".*.*.*.paprikarecipe"/>
+			<data android:pathPattern=".*.*.*.*.paprikarecipe"/>
+		    </intent-filter>-->
 		
 		</config-file>
 	
