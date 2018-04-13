@@ -219,29 +219,7 @@
 	
 	<platform name="ios">
 
-	<config-file target="*-Info.plist" parent="UTExportedTypeDeclarations">
-            <array>
-                <dict>
-                    <key>UTTypeConformsTo</key>
-                    <array>
-                        <string>public.plain-text</string>
-                        <string>public.text</string>
-			<string>public.data</string>
-                    </array>
-                    <key>UTTypeDescription</key>
-                    <string>CookBook Recipe File</string>
-                    <key>UTTypeIdentifier</key>
-                    <string>com.app.cookbook.cookbook</string>
-                    <key>UTTypeTagSpecification</key>
-                    <dict>
-                        <key>public.filename-extension</key>
-                        <string>cookbook</string>
-                    </dict>
-                </dict>
-
-            </array>
-        </config-file>
-		<config-file target="*-Info.plist" parent="UTImportedTypeDeclarations">
+	<config-file target="*-Info.plist" parent="UTImportedTypeDeclarations">
             <array>
 				<dict>
 					<key>UTTypeConformsTo</key>
@@ -336,9 +314,51 @@
                         <string>hrecipe</string>
                     </array>
                 </dict>
+		<dict>
+                    <key>CFBundleTypeName</key>
+                    <string>FDX File</string>
+                    <key>LSHandlerRank</key>
+                    <string>Alternate</string>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>LSItemContentTypes</key>
+                    <array>
+                        <string>public.fdx</string>
+                    </array>
+                    <key>CFBundleTypeExtensions</key>
+                    <array>
+                        <string>fdx</string>
+                    </array>
+                </dict>
             </array>
 
         </config-file>
+	
+	
+	<config-file target="*-Info.plist" parent="UTExportedTypeDeclarations">
+            <array>
+                <dict>
+                    <key>UTTypeConformsTo</key>
+                    <array>
+                        <string>public.plain-text</string>
+                        <string>public.text</string>
+			<string>public.data</string>
+			<string>public.content</string>
+                    </array>
+                    <key>UTTypeDescription</key>
+                    <string>CookBook Recipe File</string>
+                    <key>UTTypeIdentifier</key>
+                    <string>com.app.cookbook.cookbook</string>
+                    <key>UTTypeTagSpecification</key>
+                    <dict>
+                        <key>public.filename-extension</key>
+                        <string>cookbook</string>
+                    </dict>
+                </dict>
+
+            </array>
+        </config-file>
+		
 	</platform>
 	
 </plugin>
