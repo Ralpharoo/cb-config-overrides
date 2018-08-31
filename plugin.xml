@@ -341,8 +341,8 @@
                     <key>UTTypeConformsTo</key>
                     <array>
 		        <string>public.text</string>
-                        <!--<string>public.plain-text</string>-->
-			<string>public.data</string>
+                        <string>public.plain-text</string>
+			<!--<string>public.data</string>-->
 			<!--<string>public.content</string>-->
                     </array>
                     <key>UTTypeDescription</key>
