@@ -218,6 +218,12 @@
 	
 	<platform name="ios">
 
+	<config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+		<dict> 
+		    <key>NSAllowsArbitraryLoads</key><true/>
+		</dict>
+	</config>
+		
 	<config-file target="*-Info.plist" parent="UTImportedTypeDeclarations">
             <array>
 				<dict>
