@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cb-config-overrides" version="0.1.983" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cb-config-overrides" version="0.1.984" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>CB: Config / Plist Overrides</name>
     <author>Ralpharoo</author>
     <description>CB Config / Plist Overrides</description>
@@ -257,6 +257,52 @@
 					</dict>
 				</dict>
             </array>
+		
+		
+			<array>
+				<dict>
+					<key>UTTypeConformsTo</key>
+					<array>
+						<string>public.data</string>
+						<string>public.text</string>
+					</array>
+					<key>UTTypeIdentifier</key>
+					<string>public.html</string>
+					<key>UTTypeDescription</key>
+					<string>HTML Data</string>
+					<key>UTTypeTagSpecification</key>
+					<dict>
+						<key>public.filename-extension</key>
+						<array>
+							<string>html</string>
+						</array>
+					</dict>
+				</dict>
+            		</array>
+		
+			<array>
+				<dict>
+					<key>UTTypeConformsTo</key>
+					<array>
+						<string>public.data</string>
+						<string>public.text</string>
+					</array>
+					<key>UTTypeIdentifier</key>
+					<string>public.yml</string>
+					<key>UTTypeDescription</key>
+					<string>HTML Data</string>
+					<key>UTTypeTagSpecification</key>
+					<dict>
+						<key>public.filename-extension</key>
+						<array>
+							<string>yml</string>
+							<string>yaml</string>
+						</array>
+					</dict>
+				</dict>
+            		</array>
+		
+		
         </config-file>
 				
 		
@@ -308,6 +354,40 @@
                     <key>CFBundleTypeExtensions</key>
                     <array>
                         <string>hrecipe</string>
+                    </array>
+                </dict>
+	       <dict>
+                    <key>CFBundleTypeName</key>
+                    <string>HTML Recipe File</string>
+                    <key>LSHandlerRank</key>
+                    <string>Alternate</string>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>LSItemContentTypes</key>
+                    <array>
+                        <string>public.html</string>
+                    </array>
+                    <key>CFBundleTypeExtensions</key>
+                    <array>
+                        <string>html</string>
+                    </array>
+                </dict>
+	       <dict>
+                    <key>CFBundleTypeName</key>
+                    <string>YAML Recipe File</string>
+                    <key>LSHandlerRank</key>
+                    <string>Alternate</string>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>LSItemContentTypes</key>
+                    <array>
+                        <string>public.yml</string>
+                        <string>public.yaml</string>
+                    </array>
+                    <key>CFBundleTypeExtensions</key>
+                    <array>
+                        <string>yml</string>
+                        <string>yaml</string>
                     </array>
                 </dict>
 		<dict>
