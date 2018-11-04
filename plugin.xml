@@ -27,11 +27,11 @@
 			    	tools:ignore="AppLinkUrlError">
 				
 				<action android:name="android.intent.action.SEND" />
-				<action android:name="android.intent.action.VIEW" />
-				<action android:name="android.intent.action.EDIT" />
+				<!--<action android:name="android.intent.action.VIEW" />
+				<action android:name="android.intent.action.EDIT" />-->
 				
-				<category android:name="android.intent.category.DEFAULT" />
-				<!--<category android:name="android.intent.category.BROWSABLE"/>  TODO: DO WE WANT THIS -->
+				<!--<category android:name="android.intent.category.DEFAULT" />-->
+				<category android:name="android.intent.category.BROWSABLE"/>  <!-- TODO: DO WE WANT THIS -->
 				<data android:mimeType="text/html" />
 				<data android:mimeType="text/plain" />
 				<data android:mimeType="application/cookbook" />
