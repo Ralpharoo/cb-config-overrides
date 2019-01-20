@@ -34,6 +34,8 @@
 			<data android:scheme="http"/>
 			<data android:scheme="https"/>
 		    </intent-filter>
+			
+			
 		    <intent-filter>
 			<action android:name="android.intent.action.VIEW"/>
 			<category android:name="android.intent.category.DEFAULT"/>
@@ -44,8 +46,41 @@
 		    <intent-filter>
 			<action android:name="android.intent.action.VIEW"/>
 			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:mimeType="application/cookbook"/>
+		    </intent-filter>
+			
+			
+		
+		    <intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:host="*"/>
+			<data android:pathPattern=".*\\.paprikarecipe"/>
+			<data android:scheme="file"/>
+		    </intent-filter>
+		    <intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
 			<data android:mimeType="application/paprikarecipe"/>
 		    </intent-filter>
+			
+			
+		    <intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:host="*"/>
+			<data android:pathPattern=".*\\.yml"/>
+		        <data android:pathPattern=".*\\.yaml"/>
+			<data android:scheme="file"/>
+		    </intent-filter>
+		    <intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<data android:mimeType="text/yml"/>
+		        <data android:mimeType="text/yaml"/>
+		    </intent-filter>
+			
+			
 		    <intent-filter>
 			<action android:name="android.intent.action.VIEW"/>
 			<category android:name="android.intent.category.DEFAULT"/>
