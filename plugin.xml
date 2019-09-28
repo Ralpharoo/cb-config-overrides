@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cb-config-overrides" version="0.1.994" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cb-config-overrides" version="0.1.995" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>CB: Config / Plist Overrides</name>
     <author>Ralpharoo</author>
     <description>CB Config / Plist Overrides</description>
@@ -10,16 +10,16 @@
     </engines>
 	
 	<platform name="android">
-		<config-file target="AndroidManifest.xml" parent="/manifest" mode="add">
+		
+		<edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
 			<uses-permission android:name="android.permission.CAMERA" />
 			<!--<uses-permission android:name="com.android.vending.BILLING"/>-->
 			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />	 <!-- This is not appearing? -->	
 		</config-file>
 		
 		
-		
 		<!-- Old Intents -->
-		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity"  mode="add">
+		<edit-config file="AndroidManifest.xml" target="/manifest/application/activity"  mode="merge">
 			
 		    <intent-filter>
 			<action android:name="android.intent.action.SEND"/>
@@ -35,7 +35,6 @@
 			<data android:scheme="https"/>
 		    </intent-filter>
 			
-			
 		    <intent-filter>
 			<action android:name="android.intent.action.VIEW"/>
 			<category android:name="android.intent.category.DEFAULT"/>
@@ -49,8 +48,6 @@
 			<data android:mimeType="application/cookbook"/>
 		    </intent-filter>
 			
-			
-		
 		    <intent-filter>
 			<action android:name="android.intent.action.VIEW"/>
 			<category android:name="android.intent.category.DEFAULT"/>
@@ -80,220 +77,12 @@
 		        <data android:mimeType="text/yaml"/>
 		    </intent-filter>
 			
-			
 		    <intent-filter>
 			<action android:name="android.intent.action.VIEW"/>
 			<category android:name="android.intent.category.DEFAULT"/>
 			<data android:mimeType="application/octet-stream"/>
 		    </intent-filter>
-			
-		
-			<!-- Accept from Browser  
-			<intent-filter
-			       android:label="@string/app_name"
-			    	tools:ignore="AppLinkUrlError">
-				<action android:name="android.intent.action.SEND" />
-				<category android:name="android.intent.category.BROWSABLE"/> 
-				<data android:mimeType="text/plain" />
-			</intent-filter>-->
-			
-			<!-- Catch CookBook THIS WORKS BUT OFFERS US FOR ALL OTHER FILES?? LESSER EVIL? 
-
-			<intent-filter
-			    android:label="@string/app_name"
-			    tools:ignore="AppLinkUrlError">
-			    <action android:name="android.intent.action.VIEW" />
-			    <action android:name="android.intent.action.EDIT" />
-			    <category android:name="android.intent.category.DEFAULT" />
-				<data android:scheme="file" />    < ! - - THESE KILL IT - - >
-				<data android:scheme="content" /> < ! - - THESE KILL IT - - >
-			    <data android:pathPattern=".*\\.cookbook" />
-			    <data android:pathPattern=".*\\.paprikafile" />
-			    <data android:pathPattern=".*\\.yaml" />
-			    <data android:pathPattern=".*\\.yml" />
-			</intent-filter>-->
-			    
-			<!-- <intent-filter 
-			    android:label="@string/app_name"
-			    tools:ignore="AppLinkUrlError">
-			    <action android:name="android.intent.action.VIEW" />
-			    <category android:name="android.intent.category.DEFAULT" />
-			    <data android:scheme="file" />
-			    <data android:host="*" />
-			    <data android:pathPattern=".*\\.cookbook" />
-			  </intent-filter>
-			
-			<intent-filter 
-			    android:label="@string/app_name"
-			    tools:ignore="AppLinkUrlError">
-			    <action android:name="android.intent.action.VIEW" />
-			    <category android:name="android.intent.category.DEFAULT" />
-			    <data android:scheme="file" />
-			    <data android:host="*" />
-			    <data android:pathPattern=".*\\.paprikafile" />
-			  </intent-filter>
-			
-			 <intent-filter
-			    android:label="@string/app_name"
-			    tools:ignore="AppLinkUrlError">
-			    <action android:name="android.intent.action.VIEW" />
-			    <category android:name="android.intent.category.BROWSABLE" />
-			    <category android:name="android.intent.category.DEFAULT" />
-			    <data android:scheme="http" />
-			    <data android:host="*" />
-			    <data android:pathPattern=".*\\.cookbook" />
-			  </intent-filter>-->
-			
-			
-		  <!--<intent-filter android:label="@string/app_name">
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:scheme="content"/>
-			<data android:mimeType="application/octet-stream"/>
-			<data android:pathPattern=".*/.hrecipe"/>
-			<data android:pathPattern=".*\\.hrecipe"/>
-			<data android:pathPattern=".*.hrecipe"/>
-		    </intent-filter>
-		    <intent-filter android:label="@string/app_name">
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:scheme="file"/>
-			<data android:pathPattern=".*/.hrecipe"/>
-			<data android:pathPattern=".*\\.hrecipe"/>
-			<data android:pathPattern=".*.hrecipe"/>
-		    </intent-filter>
-		    <intent-filter android:label="@string/app_name">
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:pathPattern=".*/.hrecipe" android:scheme="http"/>
-			<data android:pathPattern=".*/.hrecipe" android:scheme="https"/>
-		    </intent-filter>
-		    <intent-filter>
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:scheme="file"/>
-			<data android:mimeType="*/*"/>
-			<data android:host="*"/>
-			<data android:pathPattern=".*/.hrecipe"/>
-			<data android:pathPattern=".*/..*/.hrecipe"/>
-			<data android:pathPattern=".*/..*/..*/.hrecipe"/>
-			<data android:pathPattern=".*/..*/..*/..*/.hrecipe"/>
-			<data android:pathPattern=".*/.hrecipe"/>
-			<data android:pathPattern=".*/.*/.hrecipe"/>
-			<data android:pathPattern=".*/.*/.*/.hrecipe"/>
-			<data android:pathPattern=".*/.*/.*/.*/.hrecipe"/>
-			<data android:pathPattern=".*.hrecipe"/>
-			<data android:pathPattern=".*.*.hrecipe"/>
-			<data android:pathPattern=".*.*.*.hrecipe"/>
-			<data android:pathPattern=".*.*.*.*.hrecipe"/>
-		    </intent-filter>
-
-
-		<intent-filter android:label="@string/app_name">
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:scheme="content"/>
-			<data android:mimeType="application/octet-stream"/>
-			<data android:pathPattern=".*/.paprikarecipe"/>
-			<data android:pathPattern=".*\\.paprikarecipe"/>
-			<data android:pathPattern=".*.paprikarecipe"/>
-		    </intent-filter>
-		    <intent-filter android:label="@string/app_name">
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:scheme="file"/>
-			<data android:pathPattern=".*/.paprikarecipe"/>
-			<data android:pathPattern=".*\\.paprikarecipe"/>
-			<data android:pathPattern=".*.paprikarecipe"/>
-		    </intent-filter>
-		    <intent-filter android:label="@string/app_name">
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:pathPattern=".*/.paprikarecipe" android:scheme="http"/>
-			<data android:pathPattern=".*/.paprikarecipe" android:scheme="https"/>
-		    </intent-filter>
-		    <intent-filter>
-			<action android:name="android.intent.action.VIEW"/>
-			<category android:name="android.intent.category.DEFAULT"/>
-			<data android:scheme="file"/>
-			<data android:mimeType="*/*"/>
-			<data android:host="*"/>
-			<data android:pathPattern=".*/.paprikarecipe"/>
-			<data android:pathPattern=".*/..*/.paprikarecipe"/>
-			<data android:pathPattern=".*/..*/..*/.paprikarecipe"/>
-			<data android:pathPattern=".*/..*/..*/..*/.paprikarecipe"/>
-			<data android:pathPattern=".*/.paprikarecipe"/>
-			<data android:pathPattern=".*/.*/.paprikarecipe"/>
-			<data android:pathPattern=".*/.*/.*/.paprikarecipe"/>
-			<data android:pathPattern=".*/.*/.*/.*/.paprikarecipe"/>
-			<data android:pathPattern=".*.paprikarecipe"/>
-			<data android:pathPattern=".*.*.paprikarecipe"/>
-			<data android:pathPattern=".*.*.*.paprikarecipe"/>
-			<data android:pathPattern=".*.*.*.*.paprikarecipe"/>
-		    </intent-filter>-->
-		
 		</config-file>
-	
-		<!--
-			Works but app cannot open file passed from Downloads?
-			<config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
-						
-				<intent-filter android:name=".cb">
-					<action android:name="android.intent.action.VIEW" />
-
-					<category android:name="android.intent.category.DEFAULT" />
-					<category android:name="android.intent.category.BROWSABLE" />
-
-					<data android:scheme="file" />
-					<data android:scheme="content" />
-					<data android:mimeType="*/*" />
-					
-					<data android:host="*" />
-					<data android:pathPattern=".*\\.cookbook" />
-					<data android:pathPattern=".*\\..*\\.cookbook" />
-					<data android:pathPattern=".*\\..*\\..*\\.cookbook" />
-					<data android:pathPattern=".*\\..*\\..*\\..*\\.cookbook" />
-				</intent-filter>
-			
-				<intent-filter  android:name=".cb1">
-					<action android:name="android.intent.action.VIEW" />
-
-					<category android:name="android.intent.category.DEFAULT" />
-					<category android:name="android.intent.category.BROWSABLE" />
-
-					<data android:scheme="file" />
-					<data android:scheme="content" />
-					<data android:mimeType="*/*" />
-					
-					<data android:host="*" />
-					<data android:pathPattern=".*\\.hrecipe" />
-					<data android:pathPattern=".*\\..*\\.hrecipe" />
-					<data android:pathPattern=".*\\..*\\..*\\.hrecipe" />
-					<data android:pathPattern=".*\\..*\\..*\\..*\\.hrecipe" />
-				</intent-filter>
-			
-				<intent-filter android:name=".cb2">
-					
-					<action android:name="android.intent.action.VIEW" />
-
-					<category android:name="android.intent.category.DEFAULT" />
-					<category android:name="android.intent.category.BROWSABLE" />
-
-					<data android:scheme="file" />
-					<data android:scheme="content" />
-					<data android:mimeType="*/*" />
-					
-					<data android:host="*" />
-					<data android:pathPattern=".*\\.paprikarecipe" />
-					<data android:pathPattern=".*\\..*\\.paprikarecipe" />
-					<data android:pathPattern=".*\\..*\\..*\\.paprikarecipe" />
-					<data android:pathPattern=".*\\..*\\..*\\..*\\.paprikarecipe" />
-				</intent-filter>
-						
-		</config-file>-->
-		
-		
-		
 	</platform>
 	
 	
