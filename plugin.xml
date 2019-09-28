@@ -1,25 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cb-config-overrides" version="0.1.996" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin 
+	id="cb-config-overrides" 
+	version="0.1.996a" 
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+>
+	
     <name>CB: Config / Plist Overrides</name>
     <author>Ralpharoo</author>
     <description>CB Config / Plist Overrides</description>
     <keywords></keywords>
     <license>MIT</license>
+	
     <engines>
         <engine name="cordova" version=">=3.0.0"/>
+	<engine name="cordova-android" version=">=6.3.0"  />
+        <engine name="android-sdk"     version=">=26" />
     </engines>
 	
 	<platform name="android">
 		
-		<edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
+		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.CAMERA" />
-			<!--<uses-permission android:name="com.android.vending.BILLING"/>-->
-			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />	 <!-- This is not appearing? -->	
-		</edit-config>
-		
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />	
+		</config-file>
 		
 		<!-- Old Intents -->
-		<edit-config file="AndroidManifest.xml" target="/manifest/application/activity"  mode="merge">
+		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
 			
 		    <intent-filter>
 			<action android:name="android.intent.action.SEND"/>
@@ -82,20 +89,11 @@
 			<category android:name="android.intent.category.DEFAULT"/>
 			<data android:mimeType="application/octet-stream"/>
 		    </intent-filter>
-		</edit-config>
+		</config-file>
 	</platform>
 	
 	
 	<platform name="ios">
-
-	  <!--TRIAL REMOVE TO STOP ERROR? <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
-	      <dict>
-		  <key>NSAllowsArbitraryLoads</key>
-		  <true/>
-		  <key>NSAllowsArbitraryLoadsInWebContent</key>
-		  <true/>
-	      </dict>
-	  </config-file>-->
 		
 	<config-file target="*-Info.plist" parent="UTImportedTypeDeclarations">
             <array>
