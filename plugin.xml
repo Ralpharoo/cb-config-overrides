@@ -15,7 +15,7 @@
 			<uses-permission android:name="android.permission.CAMERA" />
 			<!--<uses-permission android:name="com.android.vending.BILLING"/>-->
 			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />	 <!-- This is not appearing? -->	
-		</config-file>
+		</edit-config>
 		
 		
 		<!-- Old Intents -->
@@ -82,7 +82,7 @@
 			<category android:name="android.intent.category.DEFAULT"/>
 			<data android:mimeType="application/octet-stream"/>
 		    </intent-filter>
-		</config-file>
+		</edit-config>
 	</platform>
 	
 	
