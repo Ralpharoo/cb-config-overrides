@@ -19,12 +19,7 @@
     </engines>
 	
 	<platform name="android">
-		
-		<!-- net::ERR_CLEARTEXT_NOT_PERMITTED - Needed on 9 to allow unsafe URL -->
-		<config-file target="AndroidManifest.xml" parent="/manifest" mode="merge">
-			<application android:usesCleartextTraffic="true" /> <!-- This is not appearing? -->
-		</config-file>
-		
+				
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 			<uses-permission android:name="android.permission.CAMERA" />
 			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />	
